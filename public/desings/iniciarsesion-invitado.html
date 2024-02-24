@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CARXY</title>
-    <link rel="icon" href="/sources/img/Logo5__main.png">
+    <link rel="icon" href="/Carxy/sources/img/Logo5__main.png">
+    <link rel="stylesheet" href="/Carxy/CSS/iniciarsesion-invitado-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
 </head>
 <body>
     <div class="bienvenida-logo">
         <h1>Bienvenidos a</h1>
-        <img src="/sources/img/Logo2__main.png" alt="Logo de CARXY">
+        <img src="/Carxy/sources/img/Logo2__main.png" alt="Logo de CARXY" id="logo-carxy-bienvenida">
     </div>
     <div class="iniciarsesion">
-        <h2>Iniciar como Invitado</h2>
-        <h3>Iniciar Sesión</h3>
-        <span>Nombre de usuario</span>
-        <input type="text" placeholder="Pon un nombre de usuario">
-        <button><a href="#">Iniciar sesión</a></button>
-        <button><a href="#">Registrarse</a></button>
+        <h2 id="sesion-invitado">Iniciar como Invitado</h2>
+        <a href="#" id="iniciarsesion-cuenta">Inicia sesión con tu cuenta</a>
+    </div>
+    <div class="ingresarusuario-invitado">
+        <form action="">
+            <label for="Nombre de usuario" id="label-nombreusuario"><b>Nombre de usuario</b></label>
+            <input type="text" placeholder="Pon un nombre de usuario" id="input-usuarioinvitado">
+        </form>
+    </div>
+    <div class="iniciarsesion-registro">
+        <a href="#" id="boton-iniciarsesion">Iniciar sesión</a>
+        <a href="#" id="boton-registro">Registrarse</a>
     </div>
 </body>
 </html>
