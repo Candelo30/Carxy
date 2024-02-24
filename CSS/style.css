@@ -10,4 +10,13 @@
   --purple-heart-800: #5a03d5; /* Color primario */
   --purple-heart-900: #4b05ad;
   --purple-heart-950: #2c0076;
+
+  /* Funtes y tamaños de texto */
+  --font-text: "Josefin Sans", sans-serif;
+  --font-text_2: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
 }
