@@ -1,30 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Login | Carxy</title>
-
-    <link rel="icon" href="./sources/img/Logo5__main.png" />
     <link rel="stylesheet" href="./CSS/style.css" />
-
-    <!-- Herrameitas para el proyecto -->
-    <!-- Google Font -->
+    <link rel="icon" href="/sources/img/Logo5__main.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    <!-- Icons -->
-    <script
-      src="https://kit.fontawesome.com/dbf11c42b4.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <div class="container-form"></div>
-    <form method="post"></form>
+    <div class="contaiener_1">
+      <div class="bg_wrapper"></div>
+      <div class="main">
+        <span>Bienvenido a</span>
+        <div class="container-img">
+          <img
+            src="../../sources/img/Logo2__main.png"
+            alt="Logo Carxy"
+            class="main-img"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container_2">
+      <div class="container">
+        <div class="container_3">
+          <span>Iniciar Sesión</span>
+          <a href="" class="link">Iniciar Sesión como invitado</a>
+        </div>
+        <form action="" method="post">
+          <div class="group-input">
+            <label for="init">Nombre de usuario</label>
+            <input
+              type="text"
+              id="init"
+              name="Guest"
+              placeholder="pepito perez"
+            />
+          </div>
+          <div class="group-input">
+            <label for="init">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Introduce tu contraseña"
+            />
+          </div>
+          <div class="container-button">
+            <button class="btn-1">Incia Sesión</button>
+            <button class="btn-2">Registrate</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
