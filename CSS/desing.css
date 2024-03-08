@@ -97,6 +97,7 @@ main {
   grid-column: 1/10;
   grid-row: 1/11;
   background-image: url(../../sources/img/img-wrapper.jpg);
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
