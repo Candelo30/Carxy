@@ -176,3 +176,34 @@ main {
 .social-icon {
   font-size: 1.5em;
 }
+
+/* > links */
+
+.list-link {
+  color: var(--purple-heart-500);
+}
+
+.a_disable {
+  color: var(--purple-heart-100);
+  position: none;
+  cursor: default;
+}
+
+.a_active {
+  color: var(--purple-heart-700);
+}
+
+.a_active:hover,
+.list-link:hover,
+.menu-buttons__contents:hover {
+  color: var(--purple-heart-600);
+}
+
+/* buttons */
+
+.menu-buttons__contents {
+  padding: 5px;
+  background-color: transparent;
+  border: solid 1px var(--purple-heart-400);
+  color: var(--purple-heart-400);
+}

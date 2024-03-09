@@ -49,6 +49,25 @@ body {
   align-items: center;
 }
 
+.header-part__1 a {
+  text-decoration: none;
+}
+
+.header-part-1__icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--purple-heart-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 150ms ease;
+}
+
+.header-part-1__icon:hover {
+  transform: translateX(-1px);
+}
+
 /* Parte 2 - Header */
 
 .header-part__2 {
@@ -63,6 +82,8 @@ body {
   display: flex;
   gap: 5px;
   align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .color-status {
@@ -96,7 +117,7 @@ main {
 .view-element {
   grid-column: 1/10;
   grid-row: 1/11;
-  background-image: url(../../sources/img/img-wrapper.jpg);
+  background-image: url(../sources/img/img-wrapper.jpg);
 
   background-position: center;
   background-repeat: no-repeat;
@@ -111,6 +132,22 @@ main {
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.909);
+}
+
+.container-element--car {
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  object-position: center;
+  object-fit: fill;
+}
+
+.container-element--car img {
+  width: 100%;
 }
 
 .container-panel__desing {
@@ -153,4 +190,25 @@ main {
   grid-column: 1/13;
   grid-row: 11/13;
   background-color: var(--purple-heart-300);
+}
+
+/* > links */
+
+.list-link {
+  color: var(--purple-heart-500);
+}
+
+.a_disable {
+  color: var(--purple-heart-100);
+  position: none;
+  cursor: default;
+}
+
+.a_active {
+  color: var(--purple-heart-700);
+}
+
+.a_active:hover,
+.list-link:hover {
+  color: var(--purple-heart-600);
 }

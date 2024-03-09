@@ -106,14 +106,14 @@ body {
   text-align: center;
 }
 
-.contaienr span,
+.contaiener span,
 a {
   margin-top: 10px;
   display: inline-block;
   width: 100%;
 }
 
-.container span {
+span {
   font-weight: 700;
   font-size: 1.5em;
 }
@@ -121,6 +121,11 @@ a {
 a {
   text-decoration: none;
   color: var(--purple-heart-800);
+}
+
+.redirige {
+  display: inline-block;
+  font-size: 0.7em;
 }
 
 .container-button {
@@ -134,11 +139,13 @@ a {
   gap: 10px;
 }
 
-button {
+.button {
   border-radius: 40px;
-  padding: 15px;
   width: 150px;
-  font-weight: 800;
+  padding: 15px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn-1 {
