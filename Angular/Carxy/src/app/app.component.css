@@ -1,0 +1,9 @@
+app-sidenav {
+  grid-column: 1;
+  grid-row: 1 / 13;
+  border-right: 2px solid var(--purple-heart-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
