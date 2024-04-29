@@ -20,6 +20,42 @@
   /* Funtes y tamaños de texto */
   --font-text: "Josefin Sans", sans-serif;
   --font-text_2: "Roboto", sans-serif;
+
+  /* Scroll */
+
+  scrollbar-width: thin; /* Ancho fino para la barra de desplazamiento */
+
+
+  ::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+}
+
+ ::-webkit-scrollbar-thumb {
+  background: var(--purple-heart-100);
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+ ::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-heart-500);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+ ::-webkit-scrollbar-thumb:active {
+  background-color: var(--purple-heart-600);
+}
+
+ ::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+ ::-webkit-scrollbar-track:hover,
+ ::-webkit-scrollbar-track:active {
+background: #d4d4d4;
+}
 }
 
 body {
@@ -36,3 +72,15 @@ app-root {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
 }
+
+
+app-inicio {
+  grid-column: 2 / 13;
+  grid-row: 1 / 13;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+
+}
+
