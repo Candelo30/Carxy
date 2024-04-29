@@ -1,5 +1,47 @@
-<section>
-  @for (items of ListCars; track items.id) {
-  <img [src]="items.imgCar" alt="" />
+<header>
+  <input type="search" placeholder="¿Qué deseas buscar?" />
+</header>
+
+
+<main>
+
+  <div class="container-box">
+
+    @for (items of ListCars; track items.id) {
+    <div class="box">
+      
+      <div class="container-img">
+        <img [src]="items.imgCar" alt="" />
+      </div>
+
+
+      <div class="container-social-icons">
+        <nav class="nav-social">
+          <ul class="menu-social">
+            <li class="social-item">
+              <button class="menu-buttons__contents">
+                <i class="fa-regular fa-heart social-icon"></i>
+              </button>
+            </li>
+            <li class="social-item">
+              <button class="menu-buttons__contents">
+                <i class="fa-regular fa-message social-icon"></i>
+              </button>
+            </li>
+            <li class="social-item">
+              <button class="menu-buttons__contents">
+                <i class="fa-regular fa-share-from-square social-icon"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
   }
-</section>
+
+  </div>
+
+
+  
+</main>
