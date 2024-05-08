@@ -1,26 +1,45 @@
-<header>
-  <input type="search" placeholder="¿Qué deseas buscar?" />
+<header class="header">
+  <div class="header-part__1">
+    <div class="header-part-1__icon">
+      <i class="fa-solid fa-home"></i>
+    </div>
+    <div class="header-part-1__title">
+      <span>Inicio</span>
+    </div>
+  </div>
+  <div class="header-part__2">
+    <button class="NewCarBtn" (click)="addCar()">
+      Crear Publicación
+      <i class="fa-solid fa-circle-plus"></i>
+    </button>
+  </div>
 </header>
 
-
 <main>
-
   <div class="container-box">
-
     @for (items of ListCars; track items.id) {
+    {{ items.Description }}
     <div class="box">
-      
       <div class="container-img">
         <img [src]="items.imgCar" alt="" />
       </div>
-
 
       <div class="container-social-icons">
         <nav class="nav-social">
           <ul class="menu-social">
             <li class="social-item">
-              <button class="menu-buttons__contents">
-                <i class="fa-regular fa-heart social-icon"></i>
+              <button
+                class="menu-buttons__contents"
+                (click)="ToggleHeart(items.id)"
+              >
+                <i
+                  [class]="
+                    items.HeartStylesState === true
+                      ? 'fa-solid HeartActive'
+                      : 'fa-regular'
+                  "
+                  class="fa-heart social-icon"
+                ></i>
               </button>
             </li>
             <li class="social-item">
@@ -37,11 +56,9 @@
         </nav>
       </div>
 
+      <div class="container-chats"></div>
     </div>
-  }
 
+    }
   </div>
-
-
-  
 </main>

@@ -1,1 +1,46 @@
-<p>panel works!</p>
+<header class="header">
+  <div class="header-part__1">
+    <div class="header-part-1__icon">
+      <i class="fa-solid fa-pencil"></i>
+    </div>
+    <div class="header-part-1__title">
+      <span>Panel de Diseño</span>
+    </div>
+  </div>
+  <div class="header-part__2">
+    <div class="status">
+      <span>{{ this.TotalCars }} </span>
+    </div>
+    <div>
+      <button class="NewCarBtn" (click)="addCar()">
+        Crear diseños
+        <i class="fa-solid fa-circle-plus"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container-main">
+    @for (item of listCartsDesing; track item.id) {
+
+    <div class="box">
+      <a [routerLink]="['/CarsView', item.titleCar, item.imgCar]">
+        <!-- Aquí esta el router toca pasarle a cada uno el id -->
+        <div class="container-img__panel">
+          <img [src]="item.imgCar" alt="" class="img-car-panel" />
+        </div>
+      </a>
+      <div class="more-tools">
+        <span class="title"> {{ item.titleCar }} </span>
+        <div class="tools-icons">
+          <i class="fa-solid fa-copy" (click)="copyCar(item.id)"></i>
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-trash" (click)="deleteCar(item.id)"></i>
+        </div>
+      </div>
+    </div>
+
+    }
+  </div>
+</main>
