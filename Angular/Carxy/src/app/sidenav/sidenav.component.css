@@ -6,6 +6,7 @@ aside {
   padding: 10px;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .containerOne {
@@ -58,4 +59,32 @@ aside {
 
 .list-link:hover {
   color: var(--purple-heart-500);
+}
+
+.elementsView {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  position: absolute;
+  width: 200px;
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+  background-color: var(--purple-heart-950);
+
+  bottom: 10px;
+
+  transform: translateX(70%);
+  transition: all ease 300ms;
+}
+
+.elementsView ul {
+  list-style: none;
+  padding: 0;
+}
+.elementsView ul li {
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }

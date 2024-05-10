@@ -1,18 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink, RouterModule } from '@angular/router';
 import { ListsCarsService } from '../services/lists-cars.service';
-import { routes } from '../app.routes';
+
+import { SidenavComponent } from '../sidenav/sidenav.component';
 
 @Component({
   selector: 'app-panel',
   standalone: true,
-  imports: [RouterLink, RouterModule],
+  imports: [RouterLink, RouterModule, SidenavComponent],
   templateUrl: './panel.component.html',
   styleUrl: './panel.component.css'
 })
 
 export class PanelComponent  implements OnInit {
 
+  constructor(private route: ActivatedRoute) {
+    // Llama a la función para actualizar la cantidad total de carros al iniciar la página
+    this.upDatelengthListCar();
+  }
 
   TotalCars: number = 0
 
@@ -29,10 +34,6 @@ export class PanelComponent  implements OnInit {
 
   ]
 
-  constructor(private route: ActivatedRoute) {
-    // Llama a la función para actualizar la cantidad total de carros al iniciar la página
-    this.upDatelengthListCar();
-  }
 
 
 
@@ -56,7 +57,7 @@ export class PanelComponent  implements OnInit {
     const newCar = {
       id: newId,
       imgCar: '../../assets/Car2.png',
-      titleCar: `Diseño ${newId}`
+      titleCar: `Diseño ${newId}`,
     };
   
     this.listCartsDesing.push(newCar);

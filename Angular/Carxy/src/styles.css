@@ -74,7 +74,7 @@ app-root {
 }
 
 app-inicio {
-  grid-column: 2 / 13;
+  grid-column: 1 / 13;
   grid-row: 1 / 13;
 
   display: grid;
@@ -83,7 +83,7 @@ app-inicio {
 }
 
 app-panel {
-  grid-column: 2 / 13;
+  grid-column: 1 / 13;
   grid-row: 1 / 13;
 
   display: grid;
@@ -92,7 +92,7 @@ app-panel {
 }
 
 app-cars-view {
-  grid-column: 2 / 13;
+  grid-column: 1 / 13;
   grid-row: 1 / 13;
 
   display: grid;
@@ -116,4 +116,10 @@ app-page-not-found {
   gap: 10px;
   position: absolute;
   z-index: 20;
+}
+
+app-login {
+  grid-column: 1 / 13;
+  grid-row: 1 / 13;
+  display: grid;
 }

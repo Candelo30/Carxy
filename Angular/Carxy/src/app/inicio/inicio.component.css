@@ -3,6 +3,11 @@
   scrollbar-width: thin; /* Puedes usar auto, thin o none */
 }
 
+app-sidenav {
+  grid-column: 1;
+  grid-row: 1 / 13;
+}
+
 header {
   padding: 20px;
   border-bottom: 2px solid var(--purple-heart-400);
@@ -11,7 +16,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  grid-column: 1 / 13;
+  grid-column: 2 / 13;
   grid-row: 1;
 }
 
@@ -51,7 +56,7 @@ header {
 }
 
 main {
-  grid-column: 1 / 13;
+  grid-column: 2 / 13;
   grid-row: 2 / 13;
 
   display: flex;

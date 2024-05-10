@@ -10,4 +10,9 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class SidenavComponent {
 
+  ModalIsopen: boolean = false
+  ShowElements() {
+    this.ModalIsopen = !this.ModalIsopen
+  }
+
 }

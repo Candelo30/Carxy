@@ -17,6 +17,18 @@
         </ul>
       </nav>
     </div>
-    <a href="" class="list-link"><i class="fa fa-user list-icon"></i></a>
+    <button (click)="ShowElements()" class="list-link">
+      <i class="fa fa-user list-icon"></i>
+    </button>
   </div>
+
+  @if (ModalIsopen === true) {
+  <div class="elementsView">
+    <ul>
+      <li>Configuaración</li>
+      <li routerLink="/login">Cerrar Sesión</li>
+      <li>Ayuda</li>
+    </ul>
+  </div>
+  }
 </aside>
