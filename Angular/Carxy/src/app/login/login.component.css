@@ -77,6 +77,10 @@
   font-size: 1.5em;
 }
 
+.span-sesioninvitado {
+  font-size: 15px;
+}
+
 .contaiener span,
 a {
   margin-top: 10px;

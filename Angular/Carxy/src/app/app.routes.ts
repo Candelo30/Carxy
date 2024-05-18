@@ -5,12 +5,14 @@ import { CarsViewComponent } from './cars-view/cars-view.component';
 import { NgModule } from '@angular/core';
 import { PageNotFoundComponent } from './page-not-found/page-not-fount.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: 'login', component: LoginComponent , pathMatch: 'full' },
   { path: 'inicio', component: InicioComponent },
   { path: 'panel', component: PanelComponent },
+  { path: 'register', component: RegisterComponent, pathMatch: 'full'},
   { path: 'CarsView/:titleCar/:imgCar', component: CarsViewComponent },
   { path: '404', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/404' }
