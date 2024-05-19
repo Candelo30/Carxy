@@ -2,6 +2,7 @@
 
 <header class="header">
   <div class="header-part__1">
+    <img src="../../favicon.ico" alt="logo" class="baner-icon" />
     <div class="header-part-1__icon">
       <i class="fa-solid fa-home"></i>
     </div>
@@ -18,6 +19,10 @@
 </header>
 
 <main>
+  <div class="welcome">
+    <h1>{{ getSaludo() }}</h1>
+    <p>Bienvenido {{ nombreUsuario }}</p>
+  </div>
   <div class="container-box">
     @for (items of ListCars; track items.id) {
     {{ items.Description }}

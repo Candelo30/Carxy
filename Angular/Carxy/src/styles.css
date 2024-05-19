@@ -118,10 +118,9 @@ app-page-not-found {
   z-index: 20;
 }
 
-app-login, app-register {
+app-login,
+app-register {
   grid-column: 1 / 13;
   grid-row: 1 / 13;
   display: grid;
 }
-
-

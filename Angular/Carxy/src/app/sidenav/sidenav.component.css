@@ -9,6 +9,12 @@ aside {
   position: relative;
 }
 
+@media only screen and (max-width: 680px) {
+  aside {
+    border-top: 2px solid var(--purple-heart-400);
+  }
+}
+
 .containerOne {
   display: flex;
   align-items: center;
@@ -16,6 +22,16 @@ aside {
   flex-direction: column;
   height: 100%;
   width: 100%;
+}
+
+@media only screen and (max-width: 680px) {
+  .containerOne {
+    flex-direction: row;
+  }
+
+  .baner-icon {
+    display: none;
+  }
 }
 
 .containerOne img {
@@ -43,6 +59,12 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+@media only screen and (max-width: 680px) {
+  .main-list {
+    flex-direction: row;
+  }
 }
 
 .list-icon {

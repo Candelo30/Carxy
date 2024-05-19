@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SidenavComponent } from '../sidenav/sidenav.component';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-inicio',
@@ -11,6 +12,31 @@ import { SidenavComponent } from '../sidenav/sidenav.component';
  
 
 export class InicioComponent {
+
+  constructor(private authService: AuthService) { }
+
+  nombreUsuario: string = '';
+  
+  ngOnInit(): void {
+    const usuario = this.authService.getUsuarioActual();
+    if (usuario) {
+      this.nombreUsuario = usuario.nombre;
+    }
+  }
+
+  getSaludo(): string {
+    const hour = new Date().getHours();
+    if (hour < 12) {
+      return 'Buenos días ☀️';
+    } else if (hour < 18) {
+      return 'Buenas tardes 🌗';
+    } else {
+      return 'Buenas noches 🌕';
+    }
+  }
+
+
+
   
 
     ListCars = [{id: 1, imgCar: '../../assets/Car2.png', HeartStylesState: false, Description: ''},];

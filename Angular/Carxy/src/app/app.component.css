@@ -1,9 +1,3 @@
 router-outlet {
   position: absolute;
 }
-
-app-sidenav {
-  grid-column: 1;
-  grid-row: 1 / 13;
-}
-

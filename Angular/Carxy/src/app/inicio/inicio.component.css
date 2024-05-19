@@ -3,13 +3,26 @@
   scrollbar-width: thin; /* Puedes usar auto, thin o none */
 }
 
+.welcome {
+  width: 100%;
+  text-align: left;
+}
+
 app-sidenav {
   grid-column: 1;
   grid-row: 1 / 13;
 }
 
+@media only screen and (max-width: 680px) {
+  app-sidenav {
+    grid-column: 1 / 13;
+    grid-row: 13;
+    display: flex;
+  }
+}
+
 header {
-  padding: 20px;
+  padding: 10px;
   border-bottom: 2px solid var(--purple-heart-400);
   position: relative;
   display: flex;
@@ -18,6 +31,26 @@ header {
 
   grid-column: 2 / 13;
   grid-row: 1;
+}
+
+@media only screen and (max-width: 680px) {
+  header {
+    grid-column: 1 / 13;
+    grid-row: 1;
+    display: flex;
+  }
+}
+
+.baner-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 680px) {
+  .baner-icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .header-part__1 {
@@ -44,8 +77,8 @@ header {
   border: 1px solid var(--purple-heart-400);
   align-items: center;
   border-radius: 20px;
-  width: 200px;
-  padding: 15px;
+  width: 170px;
+  padding: 10px;
 
   font-size: 1em;
 }
