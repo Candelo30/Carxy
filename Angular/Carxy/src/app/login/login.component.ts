@@ -17,6 +17,7 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) { }
 
   onSubmit() {
+
     if (this.authService.login(this.username, this.password)) {
       alert('Login exitoso');
       this.router.navigate(['/inicio']);

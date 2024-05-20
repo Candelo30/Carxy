@@ -1,7 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, NgModule, OnDestroy, OnInit } from '@angular/core';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
+import { Subscription, empty } from 'rxjs';
+import { SharedService} from '../services/shared-service.service';
+import { routes } from '../app.routes';
 
+ 
 @Component({
   selector: 'app-inicio',
   standalone: true,
@@ -11,19 +16,46 @@ import { AuthService } from '../services/auth.service';
 })
  
 
-export class InicioComponent {
-
-  constructor(private authService: AuthService) { }
-
+export class InicioComponent  implements OnInit, OnDestroy {
   nombreUsuario: string = '';
-  
+  private logoutSubscription!: Subscription;
+  private loginSubscription!: Subscription;
+
+  constructor(private authService: AuthService, private sharedService: SharedService, private router: Router) {
+    this.actualizarNombreUsuario()
+  }
+
   ngOnInit(): void {
+    this.actualizarNombreUsuario();
+
+    this.logoutSubscription = this.sharedService.logoutObservable$.subscribe(() => {
+      this.nombreUsuario = '';
+    });
+
+    this.loginSubscription = this.sharedService.loginObservable$.subscribe(() => {
+      this.actualizarNombreUsuario();
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.logoutSubscription) {
+      this.logoutSubscription.unsubscribe();
+    }
+    if (this.loginSubscription) {
+      this.loginSubscription.unsubscribe();
+    }
+  }
+
+  actualizarNombreUsuario(): void {
     const usuario = this.authService.getUsuarioActual();
     if (usuario) {
       this.nombreUsuario = usuario.nombre;
     }
-  }
 
+    if ( this.nombreUsuario === '' ) {
+      this.router.navigate(['/login'])
+    }
+  }
   getSaludo(): string {
     const hour = new Date().getHours();
     if (hour < 12) {
